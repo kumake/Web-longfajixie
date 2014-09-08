@@ -1,0 +1,9 @@
+<FORM id=newsletter_form method=post 
+action=http://list.qq.com/cgi-bin/qf_compose_send target=_blank><INPUT 
+value=qf_booked_feedback type=hidden name=t> <INPUT 
+value=422b2e8fe7e05a4eecc233a81af0974331ba1248c8e43ff3 type=hidden name=id> 
+<INPUT onBlur="if(!value){value=defaultValue;this.style.color='#999'};" 
+id=username class=inputBg 
+onclick="if(value=='ÇëÊäÈëÄúµÄEmailµØÖ·'){value='';this.style.color='#000'}" 
+value=ÇëÊäÈëÄúµÄEmailµØÖ· size=25 type=text name=to><BUTTON id=submit class=btn_book 
+name=submit type=submit value="Á¢¼´¶©ÔÄ"></BUTTON> </FORM>

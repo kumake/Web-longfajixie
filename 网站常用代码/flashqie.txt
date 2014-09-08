@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Language" content="gb2312" />
+<meta name="keywords" content="站长,网页特效,js特效,js脚本,脚本,广告代码,zzjs,zzjs.net,sky,www.zzjs.net,站长特效 网" />
+<meta name="description" content="www.zzjs.net,站长特效网，站长必备js特效及广告代码。大量高质量js特效，提供高质量广告代码下载,尽在站长特效网" />
+<title>网页特效 flash幻灯效果 站长特效网欢迎你。</title>
+<style  type ="text/css">
+/*  <![CDATA[  */
+ul,li{
+padding:0;
+margin:0;
+list-style:none;
+}
+#www_zzjs_net{
+width:346px;
+height:186px;
+border:1px solid #EEE;
+position:relative;
+}
+#www_zzjs_net img{
+/*初始不要显示*/
+display:none;
+/*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+border:3px solid #FFF;
+}
+#www_zzjs_net ul{
+position:absolute;
+right:7px;
+bottom:9px;
+font:9px tahoma;
+}
+#www_zzjs_net ul li{
+display:block;
+float:left;
+width:12px;
+height:12px;
+line-height:12px;
+margin-right:3px;
+border:1px solid #999;
+background:#F0F0F0;
+text-align:center;
+cursor:pointer;
+}
+#www_zzjs_net ul li.hover{
+border-color:red;
+background:#FFE1E1;
+color:red;
+}
+/*  ]]>  */
+</style>
+</head>
+<body>
+<a href="http://www.zzjs.net/">站长特效网</a>,站长必备的高质量网页特效和广告代码。zzjs.net，站长js特效。<hr>
+<!--欢迎来到站长特效网，我们网站收集大量高质量js特效，提供许多广告代码下载，网址：www.zzjs.net，zzjs@msn.com,用.net打造靓站-->
+<script type="text/javascript">
+function www_zzjs_netCtrl(o){
+this.obj=document.getElementById(o);
+//这个私有方法虽然写了，但暂时没用到
+function addListener(ele,eventName,functionBody){
+if (ele.attachEvent){
+ele.attachEvent("on"+eventName, functionBody);
+}else if (ele.addEventListener){
+ele.addEventListener("on"+eventName,functionBody, false);
+}else{
+return false;
+}//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+}
+//初始化
+this.init=function(){
+var objImg=this.obj.getElementsByTagName("img");
+var tagLength=objImg.length;
+if (tagLength>0){
+var oUl=document.createElement("ul");
+oUl.setAttribute("id",o+"numTag");
+for (var i=0;i<tagLength;i++){
+var oLi=oUl.appendChild(document.createElement("li"));
+if (i==0){
+oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+oLi.setAttribute("className","hover");
+}
+//设置标签的数字
+oLi.appendChild(document.createTextNode((i+1)));
+}
+this.obj.appendChild(oUl);
+objImg[0].style.display="block";
+//设置标签事件
+var oTag=this.obj.getElementsByTagName("li");
+for (var i=0;i<oTag.length;i++){
+oTag[i].onmouseover=function(){
+for (j=0;j<oTag.length;j++){
+oTag[j].className="";
+objImg[j].style.display="none";
+}
+this.className="hover";
+objImg[this.innerHTML-1].style.display="block";
+}
+}
+}//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+};
+//自动滚动的方法还没写
+this.imgRoll=function(){};
+//生成对象时自动加载init()方法以初始化对象
+this.init();
+}//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+</script>
+<div id="www_zzjs_net">
+<img src="/img/20100801-1.jpg" />
+<img src="/img/20100801-2.jpg" />
+<img src="/img/20100801-3.jpg" />
+<img src="/img/20100801-4.jpg" />
+</div>
+<script type="text/javascript">
+//生成一个对象
+new www_zzjs_netCtrl("www_zzjs_net");
+</script>
+</body>
+</html>

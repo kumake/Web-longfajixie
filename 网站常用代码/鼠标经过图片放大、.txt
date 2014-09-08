@@ -1,0 +1,1 @@
+<style type="text/css"><!--a.img:link img {width:100px; height:100px;}a.img:hover img {width:200px; height:200px;}--></style><a class="img" href="#"><img src="#" /></a> 

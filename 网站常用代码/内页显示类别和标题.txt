@@ -1,0 +1,25 @@
+<%
+					Dim categoryid:categoryid = VerificationUrlParam("categoryid","int","0")
+							set rscatea = UICon.Query("select * from Sp_dictionary where   id="&categoryid)
+							if rscatea.recordcount<>0 then
+							do while not rscatea.eof
+							%>
+							<%=left(rscatea("categoryname"),8)%>
+						
+							<%
+							rscatea.movenext
+							loop
+							end if
+							%> 	>
+					
+			<%
+			Dim ItemID:ItemID = VerificationUrlParam("itemid","int","0")
+		  	set rscate = UICon.Query("select * from user_pro where  ID="&ItemID)
+			if rscate.recordcount<>0 then
+		  %>
+               <%=rscate("title")%>
+              
+            <%
+		
+			end if
+		  %>

@@ -1,0 +1,21 @@
+							<%
+							set rsn = UICon.Query("select top 6 PostTime,title,categoryID,id from user_news order by id desc")
+							if rsn.recordcount<>0 then
+							for i=1 to 6
+							%> 
+								<li><span style=" color:#CCCCCC; font-family:'ËÎÌå'">¡¤</span><span>[&nbsp;<%=year(rsn("PostTime"))%>-<%=month(rsn("PostTime"))%>-<%=day(rsn("PostTime"))%>&nbsp;]</span>&nbsp;&nbsp;<a  href="news_in.asp?categoryid=<%=rsn("categoryID")%>&amp;itemid=<%=rsn("id")%>" title="<%=rsn("title")%>" id="title" target="_blank" >
+								<% if len(rsn("title"))>13 then %>
+								<%=left(rsn("title"),13)%>...
+								<% Else %>
+								<%=rsn("title")%>
+								<% End If %>
+								</a>
+								</li>
+							<%
+							rsn.movenext
+							if rsn.eof then exit for
+							next
+							end if
+							rsn.close
+							set rsn=nothing
+							%>

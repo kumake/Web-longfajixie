@@ -1,0 +1,1 @@
+onFocus="this.select();this.style.color='#000000'" onClick="if (this.value=='联系人'){this.value=''}" onblur="if(this.value ==''||this.value=='联系人'){this.value='联系人';this.style.color='#CCCCCC'}" 

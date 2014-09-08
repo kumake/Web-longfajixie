@@ -1,0 +1,12 @@
+<%
+			Dim ItemID:ItemID = VerificationUrlParam("itemid","int","0")
+		  	set rscate = UICon.Query("select * from user_ycl where  ID="&ItemID)
+			if rscate.recordcount<>0 then
+		
+		  %>
+               <%=rscate("title")%>
+              
+            <%
+		
+			end if
+		  %>

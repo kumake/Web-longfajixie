@@ -1,0 +1,2 @@
+  <a  class="aw" style=" width:536px; text-align:right" href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.elike.idv.tw');">设为首页</a>
+  <a  class="aw" style=" width:70px; margin-left:8px;" href="javascript:window.external.AddFavorite('http://wlind.w273.bizcn.com','中国无线工控网')">加入收藏</a>

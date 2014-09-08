@@ -1,0 +1,14 @@
+<div style="text-align:center"><a title="点击添加到收藏夹" href="javascript:window.external.AddFavorite(document.location.href,document.title)" style="display:inline"><img src="/img/cang.png" alt="添加到收藏夹" border="0" height="16" width="16">添加收藏夹</a>&nbsp;&nbsp;<a title="点击复制本贴地址" style="cursor:hand" onClick="copyToClipBoard()"><img src="/img/copy.png" alt="点击复制本站给好友" border="0" height="16" width="16">复制给好友</a>
+<script language="javascript">
+function copyToClipBoard()
+{
+ var clipBoardContent=this.document.title;
+ clipBoardContent+=this.location.href;
+ window.clipboardData.setData("Text",clipBoardContent);
+ alert("复制成功，请通过QQ/MSN推荐给你的好友");
+}//欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+</script>&nbsp;&nbsp;
+<a href="javascript:u=location.href;t=document.title;c=%22%22+(window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection.createRange().text);var url=%22http://cang.baidu.com/do/add?it=%22+encodeURIComponent(t)+%22&iu=%22+encodeURIComponent(u)+%22&dc=%22+encodeURIComponent(c)+%22&fr=ien#nw=1%22;window.open(url,%22_blank%22,%22scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes%22);void 0" title="分享到百度Baidu搜藏"><img src="/img/baidu.gif" alt="分享到百度Baidu搜藏" border="0" height="16" width="16">分享到百度</a>&nbsp;&nbsp;
+<a title="分享到QQ书签" style="font-size:12px;" href="javascript:window.open('http://shuqian.qq.com/post?title='+encodeURIComponent(document.title)+'&uri='+encodeURIComponent(document.location.href)+'&jumpback=2&noui=1','favit','width=960,height=600,left=50,top=50,toolbar=no,menubar=no,location=no,scrollbars=yes,status=yes,resizable=yes');void(0)"><img src="/img/qq.gif" alt="分享到QQ书签" border="0" height="16" width="16">分享QQ书签</a>&nbsp;&nbsp;
+<a href="javascript:window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)+'&source=bookmark','_blank','width=450,height=400');void(0)" title="分享到新浪微博"><img src="/img/sina.gif" alt="分享到新浪微博" border="0" height="16" width="16">分享新浪微博</a>
+</div>

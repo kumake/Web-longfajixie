@@ -1,0 +1,12 @@
+                <%
+		  	set rscate = UICon.Query("select * from Sp_dictionary where  categoryID = 17 and id<>117 order by  IndexID")
+			if rscate.recordcount<>0 then
+			do while not rscate.eof
+		  %>
+                <a href="news.asp?categoryID=<%=rscate("id")%>"><%=rscate("categoryname")%></a>
+              
+            <%
+		  	rscate.movenext
+			loop
+			end if
+		  %> 

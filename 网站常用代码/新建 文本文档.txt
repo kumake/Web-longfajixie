@@ -1,0 +1,5 @@
+							<%
+							set rs = UICon.Query("select top 1 * from user_kcsz where   id="&categoryid)
+							if not rs.eof then
+							%>
+							<%=rs("Field_content")%>	<% Else %><div style="text-align:center">信息正在整理中</div><% End If %>	

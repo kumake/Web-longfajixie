@@ -1,0 +1,8 @@
+<div style="margin:2px auto auto 88px">
+							
+							<form action='product.asp' method='post'  onSubmit='javascript:return checkform();'>
+							  <input name='key' class='input' id="key" value=''>
+							<input name='btnactionform' value='ËÑË÷' type='submit'  style="background-image:url(images/ppp.jpg); width:73px; height:33px">
+								
+							</form>
+						</div>

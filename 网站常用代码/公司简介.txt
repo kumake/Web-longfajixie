@@ -1,0 +1,2 @@
+¡¡<% singlename = VerificationUrlParam("signle","string","¹«Ë¾¼ò½é")
+						response.Write UserSinglePage(singlename)%>

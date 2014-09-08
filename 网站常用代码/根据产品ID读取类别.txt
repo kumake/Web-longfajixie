@@ -1,0 +1,12 @@
+							<%
+							set rscatea = UICon.Query("select * from Sp_dictionary where   id="&rsnn("categoryid"))
+							if rscatea.recordcount<>0 then
+							do while not rscatea.eof
+							%>
+							<div style="margin-top:3px"><%=left(rscatea("categoryname"),8)%></div>
+							<div style="display:none">ÐÍºÅ</div>
+							<%
+							rscatea.movenext
+							loop
+							end if
+							%> 	

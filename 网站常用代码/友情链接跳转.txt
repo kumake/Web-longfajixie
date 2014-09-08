@@ -1,0 +1,8 @@
+        <select name="" onchange="window.open(this.options[this.selectedIndex].value);" >
+          <option value="1">-----友情链接-----</option>
+          <option value="http://www.baidu.com/">百度</option>
+          <option value="http://china.alibaba.com/">阿里巴巴</option>
+          <option value="http://www.cnsb.cn/">中国设备网</option>
+          <option value="http://www.zulinnet.com/">中国工程机械租赁网</option>
+          <option value="http://www.genset.hk/">中国发电机技术论坛</option>
+          </select>

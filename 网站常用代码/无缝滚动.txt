@@ -1,0 +1,69 @@
+先了解一下对象的几个的属性：
+
+innerHTML:设置或获取位于对象起始和结束标签内的 HTML
+
+scrollHeight: 获取对象的滚动高度。
+
+scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离
+
+scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离
+
+scrollWidth:获取对象的滚动宽度
+
+offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度
+
+offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置
+
+offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置
+
+offsetWidth:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的宽度
+
+DIV + JS 图片上无缝滚动
+
+<style type="text/css">
+<!--
+#demo {
+background: #FFF;
+overflow:hidden;
+border: 1px dashed #CCC;
+height: 100px;
+text-align: center;
+float: left;
+}
+#demo img {
+border: 3px solid #F2F2F2;
+display: block;
+}
+-->
+</style>
+向上滚动
+<div id="demo">
+<div id="demo1">
+<a href="#"><img src="http://www.cnrui.cn/other/link/Clear_logo.gif" border="0" /></a>
+<a href="#"><img src="http://www.cnrui.cn/other/link/Clear_logo.gif" border="0" /></a>
+<a href="#"><img src="http://www.cnrui.cn/other/link/Clear_logo.gif" border="0" /></a>
+<a href="#"><img src="http://www.cnrui.cn/other/link/Clear_logo.gif" border="0" /></a>
+<a href="#"><img src="http://www.cnrui.cn/other/link/Clear_logo.gif" border="0" /></a>
+</div>
+<div id="demo2"></div>
+</div>
+<script>
+<!--
+var speed=10; //数字越大速度越慢
+var tab=document.getElementById("demo");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML; //克隆demo1为demo2
+function Marquee(){
+if(tab2.offsetTop-tab.scrollTop<=0)//当滚动至demo1与demo2交界时
+tab.scrollTop-=tab1.offsetHeight //demo跳到最顶端
+else{
+tab.scrollTop++
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};//鼠标移上时清除定时器达到滚动停止的目的
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};//鼠标移开时重设定时器
+-->
+</script>
+ 

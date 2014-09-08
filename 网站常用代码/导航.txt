@@ -1,0 +1,45 @@
+/*导航*/
+
+#dh {
+    width:100%;
+    border-right:none;
+	margin-left:28px
+}
+#dh li {
+	font-size:14px; font-family:"宋体"; font-weight:bold;
+		width:9%;
+    display: inline;
+    list-style-type: none;
+}
+#dh li a:link,#dh li a:visited {
+    float:left;
+    padding:10px 38px;
+    text-decoration: none;
+    color:#ffffff;
+    
+}
+#dh li a:hover {
+    color:#E80B0B;
+	background-repeat:no-repeat;
+}
+#dh li a{
+    color:none;
+    background:none;
+}
+
+
+
+
+
+
+<div>
+			<ul id="dh">
+				<li><a href="index.asp">网站首页</a></li>
+				<li><a href="about.asp">关于我们</a></li>
+				<li><a href="huishou.asp">回收服务</a></li>
+				<li><a href="chaichu.asp">拆除服务</a></li>
+				<li><a href="case.asp">成功案例</a></li>
+				<li><a href="news.asp">新闻中心</a></li>
+				<li><a href="contact.asp">联系我们</a></li>
+			</ul>
+			</div>	

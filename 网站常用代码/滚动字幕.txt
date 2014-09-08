@@ -1,0 +1,4 @@
+<MARQUEE scrollAmount=1 direction="up" scrollDelay=4 width=180 height="150"
+             onMouseOver="this.stop()" onMouseOut="this.start()">
+        本站公告：&nbsp;<font color='#FF0000'>南京亚泰不锈钢销售总汇常年生产、经营各种国产及进口无缝管、合金管、结构管、石油裂化管、流体管、16mn低合金管、高压锅炉管、化肥专用管专用管、不锈钢管、不锈钢板、矩管、方矩管等。</font>
+             </MARQUEE>

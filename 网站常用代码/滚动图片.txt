@@ -1,0 +1,33 @@
+		<script src="JS/MSClass.js"></script>
+                        <div id="marqueediv6" style=" text-align:center;width:360px;height:220px; margin-left:16px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+						  
+                           <%
+
+				set rs = UICon.QUery("select top 20 * from user_pro order by hots desc ")
+				if rs.recordcount<>0 then
+				do while not rs.eof
+				'''''''''怎么分多列''''''
+				''该页面采用DIV+css。所以分列实现起来非常方便不需要改页面
+				''只需要改变css中 procontent 标签下的li的宽度即可
+				''一列 只要procontent 的宽度和li的宽度一致
+				''需要几列 只要将li的宽度设置为 procontent的几分之几
+			   %>
+                            <td width="122"><table width="122" border="0" align="center" cellpadding="0" cellspacing="0"  height="122" style="margin-top:60px;">
+                                <tr>
+                                  <td width="122"><a href="product_in.asp?categoryID=<%=rs("categoryID")%>&amp;itemid=<%=rs("id")%>"><img src="<%=rs("Field_picture")%>" width="103" height="107"   border="0" style="margin-top:15px"/></a>
+								  <a href="product__in.asp?categoryID=<%=rs("categoryID")%>&amp;itemid=<%=rs("id")%>" style="display:block; text-align:center; line-height:20px; color:#FFFFFF; margin-top:5px;"><%=rs("title")%></a>
+								  </td>
+                                </tr>
+                            </table></td>
+                            <td width="10">&nbsp;</td>
+              <%
+				rs.movenext
+				loop
+				end if
+				%>              
+                          </tr>
+          </table>
+        </div>
+                        <script>new Marquee("marqueediv6",2,1,360,220,20,0,0)</script>

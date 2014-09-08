@@ -1,0 +1,35 @@
+<div class="zysb">
+				<ul>
+							<%
+							set rscate = UICon.Query("select * from Sp_dictionary where  categoryID = 12 order by  IndexID")
+							if rscate.recordcount<>0 then
+							do while not rscate.eof
+						  %>
+                	<li onmouseover="document.getElementById('<%= rscate("id") %>').style.display='block'"><%=rscate("categoryname")%></li>
+						<ul id="<%= rscate("id") %>" style="display:none" onmouseout="document.getElementById('<%= rscate("id") %>').style.display='none'">
+							<%
+							set rsn = UICon.Query("select top 6 PostTime,title,categoryID,id from user_pro where categoryid="&rscate("id"))
+							if rsn.recordcount<>0 then
+							for i=1 to 6
+							%> 
+						<li><a  href="product_zysb_in.asp?categoryid=<%=rsn("categoryID")%>&amp;itemid=<%=rsn("id")%>" title="<%=rsn("title")%>" id="title" target="_blank" ><%=rsn("title")%></a></li>
+						<%
+							rsn.movenext
+							if rsn.eof then exit for
+							next
+							end if
+							rsn.close
+							set rsn=nothing
+							%>	
+							</ul>
+					
+		
+              
+							<%
+							rscate.movenext
+							loop
+							end if
+						  %> 
+
+						</ul>
+			</div>

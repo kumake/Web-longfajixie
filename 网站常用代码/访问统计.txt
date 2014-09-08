@@ -1,0 +1,24 @@
+    <% 
+Function Counts(CounterFile) 
+Dim objFSO, objTS 
+Application.Lock 
+Set objFSO = Server.CreateObject("Scripting.FileSystemObject") 
+Set objTS = objFSO.OpenTextFile(Server.MapPath(CounterFile), 1, True) 
+If Not objTS.AtEndOfStream Then '检查是否到达文件结尾 
+Counts = CLng(objTS.ReadLine) 
+End If 
+Counts = Counts + 1 
+objTS.Close
+
+Set objTS = objFSO.OpenTextFile(Server.MapPath(CounterFile), 2, True) 
+objTS.WriteLine(Counts) 
+objTS.Close 
+Application.Unlock 
+End Function
+
+If Session("Counter") = Empty Then 
+Session("Counter") = Counts("Counter.txt") 
+End If
+
+%>
+<%=Session("Counter")%>

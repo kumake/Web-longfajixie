@@ -1,0 +1,33 @@
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px;">
+				<%
+				set rs = UICon.QUery("select top 6 * from user_pro order by id desc ")
+				if rs.recordcount<>0 then
+				do while not rs.eof
+				for i=1 to 2
+				%>
+				<tr>
+				<% 
+				for j=1 to 3
+				%>
+				<td width="110"><table width="110" border="0" align="center" cellpadding="0" cellspacing="0"  height="141" >
+				<tr>
+				<td width="110"><a href="product_in.asp?categoryID=<%=rs("categoryID")%>&amp;itemid=<%=rs("id")%>" target="_blank" title="<%=rs("title")%>"><img src="<%=rs("Field_picture")%>" width="103" height="107"   border="0" /></a>
+				<a href="product__in.asp?categoryID=<%=rs("categoryID")%>&amp;itemid=<%=rs("id")%>" style="display:block; text-align:center; line-height:20px; color:#333333; margin-top:5px;" target="_blank"  title="<%=rs("title")%>"><%=rs("title")%></a>
+				</td>
+				</tr>
+				</table>
+				</td>
+				<%
+				rs.movenext
+				if rs.eof then exit for
+				next
+				%> 
+				</tr>
+				<%
+				
+				if rs.eof then exit for
+				next
+				loop
+				end if
+				%> 
+				</table>
